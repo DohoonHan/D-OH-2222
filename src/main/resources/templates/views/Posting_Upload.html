@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Posting_Upload.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <h1>어떤 작품이 필요하세요?</h1>
+    <form>
+        <label for="company">회사명(단체명)</label>
+        <input type="text" id="company" name="company" placeholder="회사명을 입력해 주세요" required>
+
+        <label for="description">한 줄 소개</label>
+        <textarea id="description" name="description" rows="3" placeholder="우리 서비스는 OO을 판매하는 회사입니다." required></textarea>
+
+        <label for="industry">업종</label>
+        <select id="industry" name="industry" required>
+            <option value="">업종 선택</option>
+            <option value="1">식당/카페</option>
+            <option value="2">식품/건강</option>
+            <option value="3">IT/미디어</option>
+            <option value="4">뷰티/패션</option>
+            <option value="5">병원</option>
+            <option value="6">반려동물</option>
+            <option value="7">교육/육아</option>
+            <option value="8">공공기관</option>
+            <option value="9">일반기타</option>
+        </select>
+
+        <label for="logo">로고명</label>
+        <input type="text" id="logo" name="logo" placeholder="로고명을 입력해 주세요." required>
+
+        <label for="branding">브리핑</label>
+        <textarea id="branding" name="branding" rows="5" placeholder="브리핑을 입력해 주세요" required></textarea>
+
+        <label for="file">첨부파일</label>
+        <input type="file" id="file" name="file" accept=".zip,.jpg,.jpeg,.png" required>
+
+        <button type="submit" class="btn">다음</button>
+    </form>
+</div>
+</body>
+</html>
