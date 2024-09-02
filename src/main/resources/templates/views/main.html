@@ -10,7 +10,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
     <!-- 커스텀 CSS -->
-    <link rel="stylesheet" th:href="@{/resources/css/main/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/main/main.css}" />
 </head>
 
 <body>
@@ -21,11 +21,12 @@
     <!-- 콘텐츠 영역 -->
     <div class="content">
         <div th:if="${page != null && !page.isEmpty()}">
-            <div th:replace="'/WEB-INF/views/' + ${page} + '.html'"></div>
+            <!-- 특정 페이지가 요청되면 해당 페이지를 로드 -->
+            <div th:replace="'/views/' + ${page} + '.html'"></div>
         </div>
         <div th:unless="${page != null && !page.isEmpty()}">
             <!-- 페이지 요청이 없을 때 기본 콘텐츠를 표시 -->
-            <div th:replace="'/WEB-INF/views/main/main-content.html'"></div>
+            <div th:replace="'/views/main/main-content.html'"></div>
         </div>
     </div>
 
